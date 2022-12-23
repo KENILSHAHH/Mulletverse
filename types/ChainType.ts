@@ -1,1 +1,1 @@
-export type ChainType = "eth" | "bsc" | "matic";
+export type ChainType = "0x1" | "0x38"| "0x89";

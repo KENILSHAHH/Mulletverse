@@ -74,7 +74,7 @@ const initialState: PortfolioProps = {
     nextCursor: "",
     previousCursor: [""],
     page: 0,
-    chain: "eth",
+    chain: "0x1",
   },
   wishlist: { data: [], hasError: false, isLoading: false },
   personal: { data: [], hasError: false, isLoading: false },
@@ -85,7 +85,7 @@ interface IUserData {
   chainId: string;
 }
 
-const getNFTList = (list: NFTResponse[], chain: ChainType = "eth"): NFTType[] =>
+const getNFTList = (list: NFTResponse[], chain: ChainType = "0x1"): NFTType[] =>
   list?.map((data: NFTResponse) => ({
     address: data.token_address,
     chain,
@@ -99,7 +99,7 @@ export const getDashboardNFTs = createAsyncThunk(
   "portfolio/GET_DASHBOARD_NFT",
   async (data: GetNFTProps) => {
     const address = "0x4F5beD793202f22d17CDC3d6eBe538c07A474126";
-    const chain = "eth";
+    const chain = "0x1";
     const limit = data.limit;
     const response = await data.account.getNFTs({
       address,

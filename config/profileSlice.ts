@@ -38,7 +38,7 @@ const initialState: ProfileProps = {
   hasError: false,
   isLoading: false,
   createdNFT: [],
-  chain: "eth",
+  chain: "0x1",
   imageUrl: "",
   username: "",
   bio: "",
@@ -55,7 +55,7 @@ const initialState: ProfileProps = {
   },
 };
 
-const getNFTList = (list: NFTResponse[], chain: ChainType = "eth"): NFTType[] =>
+const getNFTList = (list: NFTResponse[], chain: ChainType = "0x1"): NFTType[] =>
   list?.map((data: NFTResponse) => ({
     address: data.token_address,
     chain,
