@@ -57,7 +57,7 @@ const Token: NextPage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const token: string = Array.isArray(query.token) ? query.token[0] : query.token || "";
   const tokenId: string = Array.isArray(query.id) ? query.id[0] : query.id || "";
-  const chain: string = Array.isArray(query.chain) ? query.chain[0] : query.chain || "0x1";
+  const chain: string = Array.isArray(query.chain) ? query.chain[0] : query.chain || "eth";
   const { data, isLoading, hasError, collection } = useSelector((store: StoreType) => store.token);
   const { save: saveToWishlist } = useNewMoralisObject("Wishlist");
   const { fetch: getWishlist } = useMoralisQuery("Wishlist");
