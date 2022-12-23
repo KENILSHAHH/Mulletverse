@@ -31,6 +31,7 @@ const Home: NextPage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const ADDRESS: string = "0xd45058Bf25BBD8F586124C479D384c8C708CE23A";
   const CHAIN = "0x1";
+  //done
 
   useEffect(() => {
     if (isInitialized) {
