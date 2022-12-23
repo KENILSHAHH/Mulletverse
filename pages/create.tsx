@@ -142,7 +142,7 @@ const Create: NextPage = () => {
     const metadataHash = jsonFile.hash();
     try {
       const { data } = await Moralis.Plugins.rarible.lazyMint({
-        chain: "eth",
+        chain: "0x1",
         userAddress: user.get("ethAddress"),
         tokenType: "ERC721",
         tokenUri: "/ipfs/" + metadataHash,

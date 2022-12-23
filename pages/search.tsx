@@ -43,7 +43,7 @@ import ErrorBanner from "../components/ErrorBanner/ErrorBanner";
 const Search: NextPage = () => {
   const { isInitialized, Moralis } = useMoralis();
   const dispatch = useDispatch<AppDispatch>();
-  const [chain, setChain] = useState<ChainType>("eth");
+  const [chain, setChain] = useState<ChainType>("0x1");
   const [isFilterOpen, setIsFilterOpen] = useState(true);
   const { query } = useRouter();
   const theme: any = useTheme();

@@ -42,7 +42,7 @@ const Marketplace: NextPage = () => {
   const dispatch = useDispatch<AppDispatch>();
   const { pathname } = useRouter();
   const PAGE_SIZE = 20;
-  const [chain, setChain] = useState<ChainType>("matic");
+  const [chain, setChain] = useState<ChainType>("0x89");
   const [isFilterOpen, setIsFilterOpen] = useState(false);
   const theme: any = useTheme();
   const { data, isLoading, total, nextCursor, previousCursor, page, hasError } = useSelector(
